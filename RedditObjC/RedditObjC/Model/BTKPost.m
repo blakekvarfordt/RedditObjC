@@ -10,7 +10,7 @@
 
 @implementation BTKPost
 
--(instancetype)initWithTitle:(NSString *)title ups:(NSInteger)ups commentCount:(NSInteger)commentCount
+-(instancetype)initWithTitle:(NSString *)title ups:(NSNumber *)ups commentCount:(NSNumber *)commentCount
 {
     // All ObjC initializers are failable
     self = [super init];
@@ -36,8 +36,8 @@
     
     // Next Level to initialize object. Get actual properties from JSON
     NSString *title = dataDictionary[[BTKPost titleKey]];
-    NSInteger upsCount = dataDictionary[[BTKPost upsKey]];
-    NSInteger commentCount = dataDictionary[[BTKPost commentCountKey]];
+    NSNumber *upsCount = dataDictionary[[BTKPost upsKey]];
+    NSNumber *commentCount = dataDictionary[[BTKPost commentCountKey]];
     
     return [self initWithTitle:title ups:upsCount commentCount:commentCount];
 

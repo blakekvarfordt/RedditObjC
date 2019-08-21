@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BTKPost : NSObject
 
 @property (nonatomic, copy, readonly) NSString *title;
-@property (nonatomic, readonly) NSInteger ups;
-@property (nonatomic, readonly) NSInteger commentCount;
+@property (nonatomic, readonly) NSNumber *ups;
+@property (nonatomic, readonly) NSNumber *commentCount;
 
 // This will initialize our object BTKPost
-- (instancetype) initWithTitle:(NSString *)title ups:(NSInteger)ups commentCount:(NSInteger)commentCount;
+- (instancetype) initWithTitle:(NSString *)title ups:(NSNumber *)ups commentCount:(NSNumber *)commentCount;
 
 
 @end

@@ -15,7 +15,7 @@
 
 
 // Shared Instance
-+ (BTKPostController *) shared {
++ (BTKPostController *) sharedController {
     static BTKPostController *shared = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
