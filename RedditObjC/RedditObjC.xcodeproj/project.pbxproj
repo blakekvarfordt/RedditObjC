@@ -13,6 +13,7 @@
 		639851D2230D8F350015A46B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639851D0230D8F350015A46B /* LaunchScreen.storyboard */; };
 		639851D5230D8F350015A46B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639851D4230D8F350015A46B /* main.m */; };
 		639851E0230D940B0015A46B /* BTKPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 639851DF230D940B0015A46B /* BTKPost.m */; };
+		6398520A230DE5C20015A46B /* BTKPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63985209230DE5C20015A46B /* BTKPostController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		639851D4230D8F350015A46B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		639851DE230D940B0015A46B /* BTKPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTKPost.h; sourceTree = "<group>"; };
 		639851DF230D940B0015A46B /* BTKPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTKPost.m; sourceTree = "<group>"; };
+		63985208230DE5C20015A46B /* BTKPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTKPostController.h; sourceTree = "<group>"; };
+		63985209230DE5C20015A46B /* BTKPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTKPostController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 		639851DD230D90BB0015A46B /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				63985208230DE5C20015A46B /* BTKPostController.h */,
+				63985209230DE5C20015A46B /* BTKPostController.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				639851D5230D8F350015A46B /* main.m in Sources */,
+				6398520A230DE5C20015A46B /* BTKPostController.m in Sources */,
 				639851E0230D940B0015A46B /* BTKPost.m in Sources */,
 				639851C7230D8F330015A46B /* AppDelegate.m in Sources */,
 			);
