@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 // This helps with build time. Not App Performance
 @class BTKPost;
@@ -16,7 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedController;
 
--(void) searchForPostWithSearchTerm:(NSString *)searchTerm completion: (void(^) (NSArray<BTKPost *> *posts, NSError *error))completion;
+- (void) searchForPostWithSearchTerm:(NSString *)searchTerm completion: (void (^) (NSArray<BTKPost *> *posts, NSError *error))completion;
+
+- (void) fetchThumbnailPost:(BTKPost *)post completion:(void(^)(UIImage *))completion;
 
 @end
 

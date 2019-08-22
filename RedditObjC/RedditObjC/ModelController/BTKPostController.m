@@ -8,7 +8,7 @@
 
 #import "BTKPostController.h"
 #import "BTKPost.h"
-
+#import <UIKit/UIKit.h>
 
 
 @implementation BTKPostController
@@ -73,16 +73,39 @@
             completion(postArray, nil);
             
         }
+    }]resume];
+}
+
+
+- (void) fetchThumbnailPost:(BTKPost *)post completion:(void(^)(UIImage *))completion
+{
+    // Allocat the string version of the thumbnail
+    NSString *thumbnailString = [[NSString alloc] initWithFormat: @"%@", post.thumbnail];
+    
+    // Turn the image string to a NSURL
+    NSURL *thumbnailURL = [[NSURL alloc] initWithString:thumbnailString];
+    
+    
+    [[NSURLSession.sharedSession dataTaskWithURL:thumbnailURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (error) {
+            NSLog(@"ERROR handling image %@", error);
+            completion(nil); return;
+        }
         
         
+        if (!data) {
+            NSLog(@"ERROR no data returned from image %@", error);
+            completion(nil); return;
+        }
         
-        
+        UIImage *thumbnail = [[UIImage alloc] initWithData:data];
+ 
+        completion(thumbnail);
         
         
         
     }]resume];
-    
-    
 }
 
 

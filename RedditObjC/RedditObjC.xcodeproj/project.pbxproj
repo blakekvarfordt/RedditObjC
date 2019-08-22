@@ -15,6 +15,7 @@
 		639851E0230D940B0015A46B /* BTKPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 639851DF230D940B0015A46B /* BTKPost.m */; };
 		6398520A230DE5C20015A46B /* BTKPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63985209230DE5C20015A46B /* BTKPostController.m */; };
 		6398520D230DF3700015A46B /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6398520C230DF3700015A46B /* PostTableViewController.swift */; };
+		63985259230F44F80015A46B /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63985258230F44F80015A46B /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		63985209230DE5C20015A46B /* BTKPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTKPostController.m; sourceTree = "<group>"; };
 		6398520B230DF3700015A46B /* RedditObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedditObjC-Bridging-Header.h"; sourceTree = "<group>"; };
 		6398520C230DF3700015A46B /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		63985258230F44F80015A46B /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		639851C4230D8F330015A46B /* RedditObjC */ = {
 			isa = PBXGroup;
 			children = (
+				63985252230F40CA0015A46B /* Views */,
 				63985203230DC3ED0015A46B /* ViewController */,
 				639851DD230D90BB0015A46B /* ModelController */,
 				639851DC230D90AF0015A46B /* Model */,
@@ -111,6 +114,14 @@
 				6398520B230DF3700015A46B /* RedditObjC-Bridging-Header.h */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		63985252230F40CA0015A46B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63985258230F44F80015A46B /* PostTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 				6398520A230DE5C20015A46B /* BTKPostController.m in Sources */,
 				639851E0230D940B0015A46B /* BTKPost.m in Sources */,
 				639851C7230D8F330015A46B /* AppDelegate.m in Sources */,
+				63985259230F44F80015A46B /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

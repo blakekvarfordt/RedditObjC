@@ -10,7 +10,7 @@
 
 @implementation BTKPost
 
--(instancetype)initWithTitle:(NSString *)title ups:(NSNumber *)ups commentCount:(NSNumber *)commentCount
+-(instancetype)initWithTitle:(NSString *)title ups:(NSNumber *)ups commentCount:(NSNumber *)commentCount thumbnail:(NSString *)thumbnail
 {
     // All ObjC initializers are failable
     self = [super init];
@@ -19,6 +19,7 @@
         _title = title;
         _ups = ups;
         _commentCount = commentCount;
+        _thumbnail = thumbnail;
     }
     return self;
 }
@@ -38,8 +39,9 @@
     NSString *title = dataDictionary[[BTKPost titleKey]];
     NSNumber *upsCount = dataDictionary[[BTKPost upsKey]];
     NSNumber *commentCount = dataDictionary[[BTKPost commentCountKey]];
+    NSString *thumbnail = dataDictionary[[BTKPost thumbnailKey]];
     
-    return [self initWithTitle:title ups:upsCount commentCount:commentCount];
+    return [self initWithTitle:title ups:upsCount commentCount:commentCount thumbnail:thumbnail];
 
 }
 
@@ -56,6 +58,11 @@
 + (NSString *) upsKey
 {
     return @"ups";
+}
+
++ (NSString *) thumbnailKey
+{
+    return @"thumbnail";
 }
 
 @end

@@ -58,20 +58,28 @@ class PostTableViewController: UITableViewController, UISearchBarDelegate {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as? PostTableViewCell else { return UITableViewCell() }
 
         let post = posts[indexPath.row]
         
-        cell.textLabel?.text = post.title
-        cell.detailTextLabel?.text = "Ups \(post.ups) 🤙 Comments \(post.commentCount)"
+        cell.titleLabel.text = post.title
+        cell.upsLabel.text = "Ups \(post.ups) 🤙 "
+        cell.commentCountLabel.text = "\(post.commentCount)"
+
         
+        
+        BTKPostController.shared().fetchThumbnailPost(post, completion: { (image) in
+            DispatchQueue.main.async {
+                cell.postImageView.image = image
+            }
+        }) 
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 200
+        return 300
     }
 
     /*
